@@ -1,0 +1,853 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  /* Why do we use transition 
+    CSS transitions allows you to change property values smoothly, over a given duration.                             */
+}
+
+:root {
+  --red: red;
+  --green: #27ae60;
+  --white: #fff;
+  --lighter-green: #97bc62ff;
+  --darker-green: #2c5f2dff;
+  --black: #000;
+  --lighter-black: #1b1a18;
+  --grey: #666;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: var(--darker-green);
+  color: var(--white);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1b1a18;
+  padding: 2rem 9%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--white);
+}
+
+header .logo i {
+  padding-right: 0.5rem;
+  color: var(--green);
+}
+
+header .phone a {
+  font-size: 2rem;
+  color: var(--white);
+  border: 2px solid var(--green);
+  border-radius: 50px;
+  padding: 10px 25px;
+}
+
+#menu-bar {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #666;
+  border: 0.1rem solid #666;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1.5rem;
+  display: none;
+}
+
+header .navbar a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  color: var(--white);
+}
+
+header .navbar a.active,
+header .phone a:hover,
+header .navbar a:hover {
+  color: var(--white);
+  background: var(--green);
+}
+
+.section1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url("images/matteo-vistocco-V2gzuCVlRhc-unsplash.jpg");
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section1 .content h2 {
+  color: var(--white);
+  font-size: 11rem;
+  font-weight: bolder;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+
+.section1 button {
+  background-color: var(--lighter-black);
+  color: var(--white);
+  padding: 20px 50px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Kanit", sans-serif;
+  cursor: pointer;
+  font-size: 2.3rem;
+  margin: 30px auto;
+}
+
+.section1 button:hover {
+  background-color: transparent;
+  border: 3px solid green;
+  color: var(--green);
+}
+
+.section2 h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 1px;
+  margin-top: 150px;
+  font-weight: 600;
+}
+
+.section2 .rows {
+  margin-top: 120px;
+}
+
+.section2 .img-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 110px;
+}
+
+.section2 .img-text h2 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.section2 .img-star {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #fab714;
+}
+
+.section2 .rows i:nth-child(5) {
+  color: var(--white);
+}
+
+.section2 .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 35px;
+  overflow: hidden;
+}
+
+.zoomOut {
+  overflow: hidden;
+}
+
+.img1 {
+  background-image: url("images/photo-1576458088443-04a19bb13da6.avif");
+  width: 15vw;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  transition: transform ease 0.3s;
+  border-bottom: 4px solid #101820ff;
+}
+
+.img1:hover {
+  transform: scale(1.1);
+}
+
+.img2 {
+  background-image: url("images/kelvin-t-AcA8moIiD3g-unsplash.jpg");
+  width: 15vw;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-bottom: 4px solid #101820ff;
+}
+
+.img2:hover {
+  transform: scale(1.1);
+}
+
+.img3 {
+  background-image: url("images/aurelien-lemasson-theobald-x00CzBt4Dfk-unsplash.jpg");
+  width: 15vw;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-bottom: 4px solid #101820ff;
+}
+
+.img3:hover {
+  transform: scale(1.1);
+}
+
+.img4 {
+  background-image: url("images/pranjall-kumar-oYkC51pOQBk-unsplash.jpg");
+  width: 15vw;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-bottom: 4px solid #101820ff;
+}
+
+.img4:hover {
+  transform: scale(1.1);
+}
+
+.img5 {
+  background-image: url("images/shardar-tarikul-islam--xXtVgtu9lM-unsplash.jpg");
+  width: 15vw;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-bottom: 4px solid #101820ff;
+}
+
+.img5:hover {
+  transform: scale(1.1);
+}
+
+.img6 {
+  background-image: url("images/wesual-click-jkC1ul95ujQ-unsplash.jpg");
+  width: 15vw;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-bottom: 4px solid #101820ff;
+}
+
+.img6:hover {
+  transform: scale(1.1);
+}
+
+.img7 {
+  background-image: url("images/photo-1571207133905-e63101f15248.avif");
+  width: 15vw;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-bottom: 4px solid #101820ff;
+}
+
+.img7:hover {
+  transform: scale(1.1);
+}
+
+.img8 {
+  background-image: url("images/amirali-mirhashemian-XtLPfib7OuM-unsplash.jpg");
+  width: 15vw;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-bottom: 4px solid #101820ff;
+}
+
+.img8:hover {
+  transform: scale(1.1);
+}
+
+.img9 {
+  background-image: url("images/engin-akyurt-i1CCaOnyWiI-unsplash.jpg");
+  width: 15vw;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-bottom: 4px solid #101820ff;
+}
+
+.img9:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1b1a18;
+  position: relative;
+  top: 100px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 200px;
+  position: relative;
+  top: 130px;
+  align-items: flex-start;
+}
+
+footer .logo {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: var(--white);
+}
+
+footer .logo i {
+  padding-right: 0.5rem;
+  color: var(--green);
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer .content p {
+  font-size: 1.8rem;
+  line-height: 35px;
+  color: var(--white);
+  position: relative;
+  top: 30px;
+}
+
+footer .content ul {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 50px;
+  gap: 25px;
+  cursor: pointer;
+  list-style: none;
+}
+
+footer .content ul li i {
+  color: var(--green);
+  font-size: 2rem;
+}
+
+footer .content1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+}
+
+footer .content1 h1 {
+  color: var(--white);
+  font-size: 2.8rem;
+}
+
+footer .content1 ul {
+  list-style: none;
+  text-decoration: none;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .content1 li a {
+  color: var(--white);
+  font-size: 2.2rem;
+  position: relative;
+  top: 30px;
+}
+
+footer .content1 li a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+footer .content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+}
+
+footer .content2 h1 {
+  color: var(--white);
+  font-size: 2.8rem;
+}
+
+footer .content2 ul {
+  list-style: none;
+  text-decoration: none;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .content2 li a {
+  color: var(--white);
+  font-size: 2.2rem;
+  position: relative;
+  top: 30px;
+}
+
+footer .content2 li a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+footer .content3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .content3 .content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  top: 50px;
+}
+
+footer .content3 h1 {
+  color: var(--white);
+  font-size: 2.8rem;
+}
+
+footer .content3 p {
+  font-size: 2.2rem;
+  line-height: 35px;
+  color: var(--white);
+}
+
+footer .content3 a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 2.2rem;
+}
+
+/* media queries */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--lighter-black);
+    border-top: 0.1rem solid #000 rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: block;
+    border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    border-left: 0.5rem solid var(--green);
+    background: var(--lighter-black);
+  }
+
+  header .phone a {
+    font-size: 1.5rem;
+    color: var(--white);
+    border: 2px solid var(--green);
+    border-radius: 50px;
+    padding: 5px 5px;
+  }
+
+  .section1 .content h2 {
+    font-size: 7rem;
+    text-align: center;
+  }
+
+  .section2 .rows {
+    margin-top: 70px;
+  }
+
+  .section2 h2:first-child {
+    margin-top: 80px;
+  }
+
+  .section2 .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+  }
+
+  .section2 .img-text {
+    position: relative;
+    bottom: 40px;
+  }
+
+  .img1 {
+    background-image: url("images/photo-1576458088443-04a19bb13da6.avif");
+    width: 65vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform ease 0.3s;
+  }
+
+  .img1:hover {
+    transform: scale(1.1);
+  }
+
+  .img2 {
+    background-image: url("images/kelvin-t-AcA8moIiD3g-unsplash.jpg");
+    width: 65vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .img3 {
+    background-image: url("images/aurelien-lemasson-theobald-x00CzBt4Dfk-unsplash.jpg");
+    width: 65vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .img4 {
+    background-image: url("images/pranjall-kumar-oYkC51pOQBk-unsplash.jpg");
+    width: 65vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .img5 {
+    background-image: url("images/shardar-tarikul-islam--xXtVgtu9lM-unsplash.jpg");
+    width: 65vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .img6 {
+    background-image: url("images/wesual-click-jkC1ul95ujQ-unsplash.jpg");
+    width: 65vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .img7 {
+    background-image: url("images/photo-1571207133905-e63101f15248.avif");
+    width: 65vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .img8 {
+    background-image: url("images/amirali-mirhashemian-XtLPfib7OuM-unsplash.jpg");
+    width: 65vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .img9 {
+    background-image: url("images/engin-akyurt-i1CCaOnyWiI-unsplash.jpg");
+    width: 65vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  footer {
+    width: 100vw;
+    height: 200vh;
+  }
+
+  footer .main-content {
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    left: 15px;
+  }
+
+  footer .content {
+    margin-top: 10px;
+  }
+
+  footer .content1 {
+    position: relative;
+    top: 15px;
+    gap: 5px;
+  }
+
+  footer .content1 ul {
+    position: relative;
+    left: -32px;
+  }
+
+  footer .content1 {
+    position: relative;
+    top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .content2 {
+    gap: 5px;
+  }
+
+  footer .content2 h1 {
+    position: relative;
+    right: 10px;
+  }
+
+  footer .content2 ul {
+    position: relative;
+    left: 0px;
+  }
+
+  footer .content3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .content3 .content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    top: 30px;
+  }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #menu-bar {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--lighter-black);
+    border-top: 0.1rem solid #000 rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: block;
+    border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    border-left: 0.5rem solid var(--green);
+    background: var(--lighter-black);
+  }
+
+  header .phone a {
+    font-size: 2rem;
+    color: var(--white);
+    border: 2px solid var(--green);
+    border-radius: 50px;
+    padding: 5px 5px;
+  }
+
+  .section1 .content h2 {
+    font-size: 5.5rem;
+    text-align: center;
+  }
+
+  .section2 h2 {
+    margin-top: 50px;
+  }
+
+  .section2 .row {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+  }
+
+  .section2 .row:nth-child(2) {
+    position: relative;
+    top: 70px;
+  }
+
+  .section2 .row:nth-child(3) {
+    position: relative;
+    top: 140px;
+  }
+
+  footer {
+    width: 100vw;
+    height: 200vh;
+  }
+
+  footer .main-content {
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    left: 15px;
+  }
+
+  footer .content {
+    margin-top: 10px;
+  }
+
+  footer .content1 {
+    position: relative;
+    top: 15px;
+    gap: 5px;
+  }
+
+  footer .content1 ul {
+    position: relative;
+    left: -32px;
+  }
+
+  footer .content1 {
+    position: relative;
+    top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .content2 {
+    gap: 5px;
+  }
+
+  footer .content2 h1 {
+    position: relative;
+    right: 10px;
+  }
+
+  footer .content3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .content3 .content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    top: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+}
